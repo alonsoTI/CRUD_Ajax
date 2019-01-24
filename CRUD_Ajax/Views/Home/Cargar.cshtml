@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cargar</title>
+</head>
+<body>
+    <div> 
+
+        Importar archivo:
+
+        @using (Html.BeginForm("Cargar", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.Raw(ViewBag.Error)
+        <span>Archivo Excel</span> 
+        <input type="file" name="archivo" value="" />
+                                   <br />
+                                   <input type="submit" name="name" value="Cargar" />
+        }
+
+    </div>
+</body>
+</html>
